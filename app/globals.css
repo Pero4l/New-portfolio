@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 
-
-/* :root {
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -25,10 +24,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-} */
-
-
-   .clip-container {
+}
+   /* .clip-container {
         position: absolute;
         top: 0;
         right: 0;
@@ -37,4 +34,4 @@ body {
         clip-path: polygon(80% 0, 100% 0%, 100% 100%, 67% 100%);
         background-color: #000000;
         z-index: -1;
-    }
+    } */
