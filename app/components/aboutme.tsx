@@ -109,8 +109,8 @@ const Aboutme = () => {
                       {/* Stats */}
                       <div className="grid grid-cols-3 gap-6 pt-8">
                         {[
-                          { number: "50+", label: "Projects Completed" },
-                          { number: "5+", label: "Years Experience" },
+                          { number: "30+", label: "Projects Completed" },
+                          { number: "2+", label: "Years Experience" },
                           { number: "100%", label: "Client Satisfaction" }
                         ].map((stat, index) => (
                           <div key={index} className="text-center group">
