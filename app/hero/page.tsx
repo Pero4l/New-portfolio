@@ -77,13 +77,15 @@ const Hero = () => {
       ))}
           </div>
 
-         <div className='lg:flex lg:justify-start'>
+         <div className='lg:relative lg:right-[285px]'>
            <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
             View My Work
             <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
          </div>
          
+
+          
          </div>
         </div>
       </section>
