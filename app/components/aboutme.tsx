@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image';
+import logo from '@/public/logo.png'
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
 
 const Aboutme = () => {
@@ -38,12 +40,10 @@ const Aboutme = () => {
                         <div className="pl-8">
                           <h3 className="text-2xl font-bold mb-4 text-white">Who I Am</h3>
                           <p className="text-lg text-white/80 leading-relaxed mb-6">
-                             My name is Peter Idiku, I'm a Freelancer Full Stack Developer
-                              based in Jos Nigeria, and I'm very passionate and dedicated 
-                              to my work with 1 year experience as a professional Full Stack 
-                              Developer. I have acquired the skills necessary to build great 
-                              and premium websites. <br />
-                             Let's build together and solve the real world problem.
+                          My name is Peter Idiku, a passionate Freelancer & Full Stack Developer 
+                          based in Jos, Nigeria. With hands-on experience building modern web solutions, 
+                          I’ve developed the skills to craft premium, high-quality websites and
+                           applications that solve real-world problems.
                           </p>
                         </div>
                       </div>
@@ -54,9 +54,9 @@ const Aboutme = () => {
                         <div className="pl-8">
                           <h3 className="text-2xl font-bold mb-4 text-white">Digital Craftsman</h3>
                           <p className="text-lg text-white/80 leading-relaxed mb-6">
-                            I'm a passionate creator who lives at the intersection of design and technology. 
-                            With over 5 years of experience, I transform complex ideas into elegant digital experiences 
-                            that captivate users and drive results.
+                            I live at the intersection of design and technology, where creativity 
+                            meets functionality. My focus is on transforming complex ideas into elegant
+                             digital experiences that captivate users and deliver meaningful results.
                           </p>
                         </div>
                       </div>
@@ -66,9 +66,10 @@ const Aboutme = () => {
                         <div className="pl-8">
                           <h3 className="text-2xl font-bold mb-4 text-white">Innovation & Excellence</h3>
                           <p className="text-lg text-white/80 leading-relaxed mb-6">
-                            My journey spans from pixel-perfect UI design to robust full-stack architecture. 
-                            I believe in pushing boundaries, embracing new technologies, and creating solutions 
-                            that are not just functional, but truly extraordinary.
+                            From pixel-perfect UI design to robust full-stack development, my 
+                            journey is driven by curiosity, continuous learning, and a commitment 
+                            to excellence. I believe in pushing boundaries, embracing new technologies,
+                             and building solutions that are not only functional, but truly extraordinary.
                           </p>
                         </div>
                       </div>
@@ -146,7 +147,7 @@ const Aboutme = () => {
                           <div className="text-center mb-8">
                             <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full flex items-center justify-center text-5xl font-bold shadow-2xl relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
                               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-                              <span className="relative z-10 text-white">PI</span>
+                              <Image className="relative z-10 text-white" src={logo} alt='PTB LOGO' />
                             </div>
                             
                             <h3 className="text-2xl font-bold text-white mb-2">Peter Idiku</h3>
