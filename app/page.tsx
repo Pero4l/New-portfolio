@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Hero from "./hero/page";
-import Navbar from "./components/layout/navbar";
 import Portfolio from "./components/portfolio";
 
 export default function Home() {

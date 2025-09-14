@@ -1,7 +1,17 @@
 import React from 'react';
+import Image from 'next/image';
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
 import { FaFacebookSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import { FaSquareGithub, FaSquareXTwitter } from "react-icons/fa6";
+import Link from 'next/link';
+
+
+const socials = [
+  { icon: Github, href: "https://github.com/Pero4l" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/peter-idiku-911178338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  { icon: Twitter, href: "https://x.com/pero4l?s=21" },
+  { icon: Mail, href: "mailto:peteridiku@gmail.com" },
+];
 
 const Hero = () => {
   return (
@@ -32,19 +42,20 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="text-center z-10 px-6">
+        <div className="flex flex-col lg:flex-row-reverse lg:gap-20 items-center text-center z-10 px-6">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle">
-              YN
+            <div className="lg:w-72 lg:h-72 w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle">
+              PI
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
-            Peter Idiku
+         <div>
+             <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
+            <span className='text-xl md:text-2xl text-white/80 font-normal'>Hello My Name Is</span> <br />Peter Idiku
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Creative Developer & Digital Artist
+            A Creative Freelancer & Full Stack Developer
           </p>
           
           <div className="text-lg text-white/60 mb-12 max-w-3xl mx-auto">
@@ -52,21 +63,25 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center space-x-6 mb-16">
-            {[Github, Linkedin, Twitter, Mail].map((Icon, index) => (
-              <a
-                key={index}
-                href="#"
-                className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:rotate-12 border border-white/20"
-              >
-                <Icon className="w-6 h-6" />
-              </a>
-            ))}
+            {socials.map(({ icon: Icon, href }, index) => (
+        <Link
+          key={index}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center 
+                     hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:rotate-12 border border-white/20"
+        >
+          <Icon className="w-6 h-6" />
+        </Link>
+      ))}
           </div>
 
           <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
             View My Work
             <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
+         </div>
         </div>
       </section>
     </div>
