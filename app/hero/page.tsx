@@ -42,7 +42,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="flex flex-col lg:flex-row-reverse lg:gap-20 items-center text-center z-10 px-6">
+        <div className="pt-16 flex flex-col lg:flex-row-reverse lg:gap-20 items-center text-center lg:text-start z-10 px-6">
           <div className="mb-8">
             <div className="lg:w-72 lg:h-72 w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle">
               PI
@@ -54,15 +54,15 @@ const Hero = () => {
             <span className='text-xl md:text-2xl text-white/80 font-normal'>Hello My Name Is</span> <br />Peter Idiku
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/80 mb-8  mx-auto leading-relaxed">
             A Creative Freelancer & Full Stack Developer
           </p>
           
           <div className="text-lg text-white/60 mb-12 max-w-3xl mx-auto">
-            Crafting exceptional digital experiences through innovative design and cutting-edge technology
+            I design and build modern, user-friendly digital experiences, blending creativity, innovation, and technology to bring ideas to life.
           </div>
 
-          <div className="flex justify-center space-x-6 mb-16">
+          <div className="flex justify-center lg:justify-start space-x-6 mb-16">
             {socials.map(({ icon: Icon, href }, index) => (
         <Link
           key={index}
@@ -77,10 +77,13 @@ const Hero = () => {
       ))}
           </div>
 
-          <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
+         <div className='lg:flex lg:justify-start'>
+           <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
             View My Work
             <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
+         </div>
+         
          </div>
         </div>
       </section>
