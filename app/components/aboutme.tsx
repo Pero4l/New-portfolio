@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palet
 const Aboutme = () => {
 
     const skills = [
-    { name: "Frontend Development", icon: <Code className="w-6 h-6" />, level: 95 },
+    { name: "Frontend Development", icon: <Code className="w-6 h-6" />, level: 100 },
     { name: "UI/UX Design", icon: <Palette className="w-6 h-6" />, level: 88 },
     { name: "Performance Optimization", icon: <Zap className="w-6 h-6" />, level: 92 }
   ];
@@ -31,6 +31,24 @@ const Aboutme = () => {
                   <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left side - Content */}
                     <div className="space-y-8">
+
+
+                       <div className="relative">
+                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
+                        <div className="pl-8">
+                          <h3 className="text-2xl font-bold mb-4 text-white">Who I Am</h3>
+                          <p className="text-lg text-white/80 leading-relaxed mb-6">
+                             My name is Peter Idiku, I'm a Freelancer Full Stack Developer
+                              based in Jos Nigeria, and I'm very passionate and dedicated 
+                              to my work with 1 year experience as a professional Full Stack 
+                              Developer. I have acquired the skills necessary to build great 
+                              and premium websites. <br />
+                             Let's build together and solve the real world problem.
+                          </p>
+                        </div>
+                      </div>
+
+
                       <div className="relative">
                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
                         <div className="pl-8">
@@ -55,7 +73,7 @@ const Aboutme = () => {
                         </div>
                       </div>
         
-                      {/* Skills with enhanced design */}
+                      {/* Skills with enhanced design */} 
                       <div className="space-y-8 pt-8">
                         {skills.map((skill, index) => (
                           <div key={index} className="group relative">
@@ -128,10 +146,10 @@ const Aboutme = () => {
                           <div className="text-center mb-8">
                             <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full flex items-center justify-center text-5xl font-bold shadow-2xl relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
                               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-                              <span className="relative z-10 text-white">YN</span>
+                              <span className="relative z-10 text-white">PI</span>
                             </div>
                             
-                            <h3 className="text-2xl font-bold text-white mb-2">Your Name</h3>
+                            <h3 className="text-2xl font-bold text-white mb-2">Peter Idiku</h3>
                             <p className="text-purple-300 font-medium">Creative Developer</p>
                           </div>
         
