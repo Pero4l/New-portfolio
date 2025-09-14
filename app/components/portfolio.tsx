@@ -43,10 +43,10 @@ const Portfolio = () => {
   return (
     <div className="bg-black text-white overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+      {/* <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Portfolio
+            Peter Idiku
           </div>
           <div className="hidden md:flex space-x-8">
             {['Home', 'About', 'Projects', 'Contact'].map((item) => (
@@ -60,19 +60,19 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden"> */}
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl animate-spin-slow"></div>
-        </div>
+        </div> */}
 
         {/* Floating particles */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div 
                 suppressHydrationWarning
@@ -124,7 +124,7 @@ const Portfolio = () => {
             <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section id="about" className="py-32 px-6 relative overflow-hidden">
