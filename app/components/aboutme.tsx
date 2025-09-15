@@ -1,13 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 import logo from '@/public/logo.png'
-// import html from '@/public/html-5.png'
-// import css from '@/public/css-3.png'
-// import javascript from '@/public/js.png'
-// import typescript from '@/public/typescript.png'
-// import react from '@/public/physics.png'
-// import next from '@/public/code.png'
-import node from '@/public/nodejs.png'
 import { Code, Palette, Zap, Monitor } from 'lucide-react';
 
 const Aboutme = () => {
