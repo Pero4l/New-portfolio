@@ -12,23 +12,27 @@ import { Code, Palette, Zap, Monitor } from 'lucide-react';
 
 const Aboutme = () => {
 
-    const skills = [
-    { name: "Frontend Development",
-      icon: <Monitor className="w-6 h-6" />, 
-      level: 100, 
-      label: [
-              {name: "HTML", img: "/public/html-5.png"},
-              {name: "CSS(Tailwind)", img: "/public/css-3.png"},
-              {name: "JAVASCRIPT", img: "/public/js.png"},
-              {name: "TYPESCRIPT", img: "/public/typescript.png"},
-              {name: "REACT.JS", img: "/public/physics.png"},
-              {name: "NEXT.JS", img: "/public/code.png"}
-             ],
-    },
-    { name: "Backend Development", icon: <Code className="w-6 h-6" />, level: 50 },
-    { name: "UI/UX Design", icon: <Palette className="w-6 h-6" />, level: 88 },
-    { name: "Performance Optimization", icon: <Zap className="w-6 h-6" />, level: 92 }
-  ];
+   const skills = [
+  { 
+    name: "Frontend Development",
+    icon: <Monitor className="w-6 h-6" />, 
+    level: 100, 
+    label: [
+      { name: "HTML", img: "/html-5.png" },
+      { name: "CSS(Tailwind)", img: "/css-3.png" },
+      { name: "JAVASCRIPT", img: "/js.png" },
+      { name: "TYPESCRIPT", img: "/typescript.png" },
+      { name: "REACT.JS", img: "/physics.png" },
+      { name: "NEXT.JS", img: "/code.png" }
+    ]
+  },
+  { name: "Backend Development", icon: <Code className="w-6 h-6" />, level: 50, label: [
+    { name: "NODE.JS", img: "/nodejs.png" },
+  ] },
+  { name: "UI/UX Design", icon: <Palette className="w-6 h-6" />, level: 88, label: [] },
+  { name: "Performance Optimization", icon: <Zap className="w-6 h-6" />, level: 92, label: [] }
+];
+
 
   return (
     <div>
@@ -122,19 +126,15 @@ const Aboutme = () => {
                                 />
                               </div>
 
-                              <div>
-                              {/* {  [
-                                  {name: "HTML", img1: "/public/html-5.png"},
-                                  {name: ''}
-                                ].map((label, index)=>(
-                                  <div key={index}>
-                                      <div>
-                                        {label.name}
-                                      </div>
-                                  </div>
-                                ))} */}
-
-                                <h1>H</h1>
+                              <div className='mt-7'>
+                              {skill.label.map(tech => (
+                              <div key={tech.name}>
+                                <div className="flex items-center space-x-3 space-y-2 py-1">
+                                  <Image src={tech.img} alt={tech.name} width={30} height={30} className="rounded" />
+                                  <span className="text-white font-medium text-sm ">{tech.name}</span>
+                                </div>
+                              </div>
+                            ))}
                               </div>
 
                               
