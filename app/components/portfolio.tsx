@@ -277,7 +277,7 @@ const Portfolio = () => {
       </section> */}
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-white/5">
+      {/* <section id="projects" className="py-20 px-6 bg-white/5">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Featured Projects
@@ -316,10 +316,10 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      {/* <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Let's Create Something Amazing
@@ -333,10 +333,10 @@ const Portfolio = () => {
             Get In Touch
           </button>
         </div>
-      </section>
+      </section> */}
 
       {/* Custom Styles */}
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes spin-slow {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to { transform: translate(-50%, -50%) rotate(360deg); }
@@ -363,7 +363,7 @@ const Portfolio = () => {
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 };
