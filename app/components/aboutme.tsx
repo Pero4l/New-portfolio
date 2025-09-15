@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
 import logo from '@/public/logo.png'
-import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap, Monitor } from 'lucide-react';
 
 const Aboutme = () => {
 
     const skills = [
-    { name: "Frontend Development", icon: <Code className="w-6 h-6" />, level: 100 },
+    { name: "Frontend Development", icon: <Monitor className="w-6 h-6" />, level: 100,  },
+    { name: "Backend Development", icon: <Code className="w-6 h-6" />, level: 50 },
     { name: "UI/UX Design", icon: <Palette className="w-6 h-6" />, level: 88 },
     { name: "Performance Optimization", icon: <Zap className="w-6 h-6" />, level: 92 }
   ];
