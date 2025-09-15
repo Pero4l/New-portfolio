@@ -1,12 +1,30 @@
 import React from 'react'
 import Image from 'next/image';
 import logo from '@/public/logo.png'
-import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap, Monitor } from 'lucide-react';
+// import html from '@/public/html-5.png'
+// import css from '@/public/css-3.png'
+// import javascript from '@/public/js.png'
+// import typescript from '@/public/typescript.png'
+// import react from '@/public/physics.png'
+// import next from '@/public/code.png'
+import node from '@/public/nodejs.png'
+import { Code, Palette, Zap, Monitor } from 'lucide-react';
 
 const Aboutme = () => {
 
     const skills = [
-    { name: "Frontend Development", icon: <Monitor className="w-6 h-6" />, level: 100,  },
+    { name: "Frontend Development",
+      icon: <Monitor className="w-6 h-6" />, 
+      level: 100, 
+      label: [
+              {name: "HTML", img: "/public/html-5.png"},
+              {name: "CSS(Tailwind)", img: "/public/css-3.png"},
+              {name: "JAVASCRIPT", img: "/public/js.png"},
+              {name: "TYPESCRIPT", img: "/public/typescript.png"},
+              {name: "REACT.JS", img: "/public/physics.png"},
+              {name: "NEXT.JS", img: "/public/code.png"}
+             ],
+    },
     { name: "Backend Development", icon: <Code className="w-6 h-6" />, level: 50 },
     { name: "UI/UX Design", icon: <Palette className="w-6 h-6" />, level: 88 },
     { name: "Performance Optimization", icon: <Zap className="w-6 h-6" />, level: 92 }
@@ -103,6 +121,23 @@ const Aboutme = () => {
                                   style={{ width: `${skill.level}%` }}
                                 />
                               </div>
+
+                              <div>
+                              {/* {  [
+                                  {name: "HTML", img1: "/public/html-5.png"},
+                                  {name: ''}
+                                ].map((label, index)=>(
+                                  <div key={index}>
+                                      <div>
+                                        {label.name}
+                                      </div>
+                                  </div>
+                                ))} */}
+
+                                <h1>H</h1>
+                              </div>
+
+                              
                             </div>
                           </div>
                         ))}
