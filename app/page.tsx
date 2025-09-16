@@ -21,7 +21,6 @@ export default function Home() {
       <Hero/>
       <Aboutme/>
       <Myservices/>
-      <Portfolio/>
       <Project/>
       <Contact/>
 

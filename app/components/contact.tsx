@@ -1,5 +1,6 @@
 import React from 'react'
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 
 const Contact = () => {
@@ -117,20 +118,23 @@ const Contact = () => {
               </div>
 
               {/* Contact Cards */}
-              <div className="space-y-4">
-                <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group cursor-pointer">
+              <div className="grid gap-6">
+              <Link href="mailto:peteridiku10@gmail.com">
+                  <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group cursor-pointer">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center border border-purple-500/30 group-hover:scale-110 transition-transform">
                       <Mail className="w-6 h-6 text-purple-400" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg text-white mb-1">Email Me</h4>
-                      <p className="text-white/60">hello@yourname.com</p>
+                      <p className="text-white/60">peteridiku10@yourname.com</p>
                     </div>
                   </div>
                 </div>
+                </Link>
                 
-                <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 group cursor-pointer">
+               <Link href="https://wa.me/2349018555631">
+                 <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 group cursor-pointer">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-blue-500/30 group-hover:scale-110 transition-transform">
                       <span className="text-blue-400 font-bold">💬</span>
@@ -141,6 +145,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+               </Link>
               </div>
 
               {/* Enhanced Social Links */}
@@ -148,14 +153,14 @@ const Contact = () => {
                 <h4 className="text-xl font-semibold mb-6 text-center lg:text-left">Connect With Me</h4>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: Github, name: 'GitHub', color: 'from-gray-600 to-gray-800', hoverColor: 'hover:from-gray-500 hover:to-gray-700' },
-                    { icon: Linkedin, name: 'LinkedIn', color: 'from-blue-600 to-blue-800', hoverColor: 'hover:from-blue-500 hover:to-blue-700' },
-                    { icon: Twitter, name: 'Twitter', color: 'from-sky-600 to-sky-800', hoverColor: 'hover:from-sky-500 hover:to-sky-700' },
-                    { icon: Mail, name: 'Email', color: 'from-purple-600 to-pink-600', hoverColor: 'hover:from-purple-500 hover:to-pink-500' }
-                  ].map(({ icon: Icon, name, color, hoverColor }, index) => (
+                    { href: "https://github.com/Pero4l", icon: Github, name: 'GitHub', color: 'from-gray-600 to-gray-800', hoverColor: 'hover:from-gray-500 hover:to-gray-700' },
+                    { href: "https://www.linkedin.com/in/peter-idiku-911178338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", icon: Linkedin, name: 'LinkedIn', color: 'from-blue-600 to-blue-800', hoverColor: 'hover:from-blue-500 hover:to-blue-700' },
+                    { href: "https://x.com/pero4l?s=21", icon: Twitter, name: 'Twitter', color: 'from-sky-600 to-sky-800', hoverColor: 'hover:from-sky-500 hover:to-sky-700' },
+                    { href: "mailto:peteridiku@gmail.com" , icon: Mail, name: 'Email', color: 'from-purple-600 to-pink-600', hoverColor: 'hover:from-purple-500 hover:to-pink-500' }
+                  ].map(({ icon: Icon, name, color, hoverColor, href }, index) => (
                     <a
                       key={index}
-                      href="#"
+                      href={href}
                       className={`bg-gradient-to-r ${color} ${hoverColor} p-4 rounded-xl flex items-center space-x-3 transition-all duration-300 hover:scale-105 hover:shadow-xl group`}
                     >
                       <Icon className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
