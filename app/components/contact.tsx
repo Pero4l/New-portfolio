@@ -1,9 +1,35 @@
 import React from 'react'
+import { useRef } from 'react';
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
 import Link from 'next/link';
-
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+ const form = useRef<HTMLFormElement>(null);
+
+ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm('service_nx0z82n', 'template_qnwphwt', form.current, {
+          publicKey: '7ItloHNh_Xlhubmsp',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    }
+  };
+
+
+
+  
   return (
     <div>
          {/* Contact Section */}
@@ -34,19 +60,20 @@ const Contact = () => {
                   Send Me a Message
                 </h3>
                 
-                <form className="space-y-6">
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="group">
                       <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">
                         First Name
                       </label>
                       <input
+                        name="user_name"
                         type="text"
                         className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                         placeholder="Your first name"
                       />
                     </div>
-                    <div className="group">
+                    {/* <div className="group">
                       <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">
                         Last Name
                       </label>
@@ -55,7 +82,7 @@ const Contact = () => {
                         className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                         placeholder="Your last name"
                       />
-                    </div>
+                    </div> */}
                   </div>
                   
                   <div className="group">
@@ -63,6 +90,7 @@ const Contact = () => {
                       Email Address
                     </label>
                     <input
+                      name="user_email"
                       type="email"
                       className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                       placeholder="your.email@example.com"
@@ -88,6 +116,7 @@ const Contact = () => {
                       Message
                     </label>
                     <textarea
+                      name="message"
                       rows={6}
                       className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm resize-none"
                       placeholder="Tell me about your project, goals, timeline, and anything else you'd like me to know..."
@@ -95,6 +124,7 @@ const Contact = () => {
                   </div>
                   
                   <button
+                    value="Send"
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center space-x-2 group"
                   >
