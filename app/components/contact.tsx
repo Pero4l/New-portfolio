@@ -1,8 +1,9 @@
+'use client'
 import React from 'react'
 import { useRef } from 'react';
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palette, Zap } from 'lucide-react';
 import Link from 'next/link';
-import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
@@ -11,22 +12,20 @@ const Contact = () => {
  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (form.current) {
+     if (form.current) {
       emailjs
-        .sendForm('service_nx0z82n', 'template_qnwphwt', form.current, {
-          publicKey: '7ItloHNh_Xlhubmsp',
-        })
+        .sendForm(
+          "service_nx0z82n",
+          "template_qnwphwt",
+          form.current,
+          "7ItloHNh_Xlhubmsp" 
+        )
         .then(
-          () => {
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
+          () => console.log("SUCCESS!"),
+          (error) => console.log("FAILED...", error.text)
         );
     }
   };
-
 
 
   
@@ -64,13 +63,13 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="group">
                       <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">
-                        First Name
+                         Name
                       </label>
                       <input
-                        name="user_name"
+                        name="name"
                         type="text"
                         className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
-                        placeholder="Your first name"
+                        placeholder="Your name"
                       />
                     </div>
                     {/* <div className="group">
@@ -86,11 +85,12 @@ const Contact = () => {
                   </div>
                   
                   <div className="group">
+
                     <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">
                       Email Address
                     </label>
                     <input
-                      name="user_email"
+                      name="email"
                       type="email"
                       className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                       placeholder="your.email@example.com"
@@ -101,7 +101,7 @@ const Contact = () => {
                     <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">
                       Project Type
                     </label>
-                    <select className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm">
+                    <select name="title" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm">
                       <option value="" className="bg-gray-900">Select project type</option>
                       <option value="web-development" className="bg-gray-900">Web Development</option>
                       <option value="mobile-app" className="bg-gray-900">Mobile App</option>
