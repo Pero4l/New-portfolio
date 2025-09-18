@@ -4,6 +4,7 @@ import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink, Code, Palet
 import { FaFacebookSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import { FaSquareGithub, FaSquareXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
+import myimage from '@/public/WhatsApp Image 2025-09-18 at 20.35.14.jpeg'
 
 
 const socials = [
@@ -44,8 +45,8 @@ const Hero = () => {
 
         <div className="pt-16 flex flex-col lg:flex-row-reverse lg:gap-20 items-center text-center lg:text-start z-10 px-6">
           <div className="mb-8">
-            <div className="lg:w-72 lg:h-72 w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle">
-              PI
+            <div className="">
+              <Image src={myimage} alt="Peter Idiku" className="lg:w-[350px] lg:h-[390px] w-48 h-56 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle" priority />
             </div>
           </div>
           
