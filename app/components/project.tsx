@@ -47,7 +47,24 @@ const Project = () => {
                 className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 <div className={`w-full h-48 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden`}>
-                  <Image src={project.image} className='h-52 rounded-md w-[350px]' alt="Project img" />
+                  <div className="relative h-full w-full rounded-md overflow-hidden">
+  {project.image ? (
+    <Image
+      src={project.image}
+      alt="Project img"
+      fill
+      className="object-cover"
+    />
+  ) : (
+    <Image
+      src="/fallback.png"
+      alt="Fallback img"
+      fill
+      className="object-cover"
+    />
+  )}
+</div>
+
                   {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div> */}
                   {/* <ExternalLink className="w-8 h-8 text-white/80 group-hover:scale-110 transition-transform" /> */}
                 </div>
@@ -74,7 +91,7 @@ const Project = () => {
 
                 {project.link && (
                   <Link href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-7 text-purple-400 hover:underline">
-                    Visit Project <ExternalLink className="w-4 h-4" />
+                   {project.link ? " Visit Project" : "No live view"} <ExternalLink className="w-4 h-4" />
                   </Link>
                 )}
               </div>
