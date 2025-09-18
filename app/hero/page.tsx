@@ -44,8 +44,8 @@ const Hero = () => {
         </div>
 
         <div className="pt-16 flex flex-col lg:flex-row-reverse lg:gap-20 items-center text-center lg:text-start z-10 px-6">
-          <div className="mb-8">
-            <div className="">
+          <div className="mb-">
+            <div className="mt-6 lg:mt-0">
               <Image src={myimage} alt="Peter Idiku" className="lg:w-[350px] lg:h-[390px] w-48 h-56 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl animate-bounce-gentle" priority />
             </div>
           </div>
@@ -79,10 +79,12 @@ const Hero = () => {
           </div>
 
          <div className='lg:relative lg:right-[285px]'>
-           <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
+           <Link href="#projects">
+            <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center mx-auto">
             View My Work
             <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
+           </Link>
          </div>
          
 
