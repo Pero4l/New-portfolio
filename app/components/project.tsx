@@ -4,8 +4,8 @@ import Image from 'next/image';
 import project1 from '../../public/Screenshot From 2025-09-18 18-57-45.png'
 import project2 from '@/public/Screenshot From 2025-09-18 21-25-04.png'
 import project3 from '@/public/Screenshot From 2025-09-18 21-26-45.png'
-import project4 from '../../public/Screenshot From 2025-09-18 19-02-06.png'
-import project5 from '../../public/Screenshot From 2025-09-18 19-03-01.png'
+import project4 from '@/public/Screenshot From 2025-09-18 21-28-26.png'
+import project5 from '@/public/Screenshot From 2025-09-18 21-29-41.png'
 import Link from 'next/link';
 
 
@@ -15,22 +15,36 @@ const Project = () => {
     const projects = [
     {
       title: "Easy Bank",
-      description: "A banking website (frontend) project i built as to keep hands.",
-      tech: ["React", "Javascript", "Tailwind CSS", "Vite"],
+      description: "A modern, responsive banking landing page built with React and Tailwind CSS, featuring smooth and sleek design.",
+      tech: ["React", "Javascript", "Tailwind CSS"],
       image: project1,
       link: "https://easy-bank-3ouw.vercel.app/"
     },
     {
-      title: "E-Commerce Empire",
-      description: "Full-stack e-commerce solution with payment integration and inventory management.",
-      tech: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
+      title: "Task Managment Web App",
+      description: "A well functional task management web application with user authentication, real-time updates, and collaborative features.",
+      tech: ["React", "Javascript", "Tailwind CSS"],
       image: project2,
     },
     {
-      title: "Creative Studio",
-      description: "Interactive portfolio website for digital artists with 3D animations and WebGL effects.",
-      tech: ["Three.js", "GSAP", "WebGL", "Blender"],
+      title: "Clone of Bamboo Website",
+      description: "A clone of the Bamboo website, showcasing my skills in frontend development and design replication.",
+      tech: ["Next.JS", "Typescript", "Tailwind CSS"],
       image: project3,
+    },
+
+    {
+      title: "Movie website",
+      description: "A movie website that allows users to browse, search, and view details about various movies, built with an API integration.",
+      tech: ["Next.JS", "Typescript", "Tailwind CSS"],
+      image: project4,
+    },
+
+    {
+      title: "E-commerce Website",
+      description: "A E-commerce website for hair with product listings, view product, i was building it for fun and for my sister.",
+      tech: ["Next.JS", "Typescript", "Tailwind CSS"],
+      image: project5,
     }
   ];
 
