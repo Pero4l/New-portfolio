@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import logo from '@/public/logo.png'
-import { Code, Palette, Zap, Monitor } from 'lucide-react';
+import { Code, Palette, Zap, Monitor, Container } from 'lucide-react';
 
 const Aboutme = () => {
 
@@ -19,6 +19,11 @@ const Aboutme = () => {
       { name: "NEXT.JS", img: "/code.png" }
     ]
   },
+
+  {name: "Docker", icon: <Container className="w-6 h-6" />, level: 100, label: [
+    { name: "DOCKER", img: "/docker.png" },
+  ]},
+
   { name: "Backend Development", icon: <Code className="w-6 h-6" />, level: 50, label: [
     { name: "NODE.JS", img: "/nodejs.png" },
   ] },
