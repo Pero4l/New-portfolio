@@ -1,26 +1,32 @@
 import React from 'react'
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import project1 from '../../public/Screenshot From 2025-09-18 18-57-45.png'
+import Link from 'next/link';
+
+
 
 const Project = () => {
 
     const projects = [
     {
-      title: "Neural Dashboard",
-      description: "AI-powered analytics platform with real-time data visualization and machine learning insights.",
-      tech: ["React", "TypeScript", "D3.js", "Python"],
-      image: "bg-gradient-to-br from-purple-600 to-blue-600"
+      title: "Easy Bank",
+      description: "A banking website (frontend) project i built as to keep hands.",
+      tech: ["React", "Javascript", "Tailwind CSS", "Vite"],
+      image: project1,
+      link: "https://easy-bank-3ouw.vercel.app/"
     },
     {
       title: "E-Commerce Empire",
       description: "Full-stack e-commerce solution with payment integration and inventory management.",
       tech: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
-      image: "bg-gradient-to-br from-green-500 to-teal-600"
+      image: ""
     },
     {
       title: "Creative Studio",
       description: "Interactive portfolio website for digital artists with 3D animations and WebGL effects.",
       tech: ["Three.js", "GSAP", "WebGL", "Blender"],
-      image: "bg-gradient-to-br from-pink-500 to-orange-500"
+      image: ""
     }
   ];
 
@@ -40,9 +46,10 @@ const Project = () => {
                 key={index}
                 className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                <div className={`w-full h-48 ${project.image} rounded-xl mb-6 flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                  <ExternalLink className="w-8 h-8 text-white/80 group-hover:scale-110 transition-transform" />
+                <div className={`w-full h-48 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden`}>
+                  <Image src={project.image} className='h-52 rounded-md w-[350px]' alt="Project img" />
+                  {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div> */}
+                  {/* <ExternalLink className="w-8 h-8 text-white/80 group-hover:scale-110 transition-transform" /> */}
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">
@@ -62,7 +69,14 @@ const Project = () => {
                       {tech}
                     </span>
                   ))}
+                  
                 </div>
+
+                {project.link && (
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-7 text-purple-400 hover:underline">
+                    Visit Project <ExternalLink className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
