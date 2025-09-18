@@ -100,7 +100,7 @@ const Contact = () => {
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         name="name"
                         type="text"
-                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                         placeholder="Your name"
                       />
                     </div>
@@ -114,7 +114,7 @@ const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       name="email"
                       type="email"
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3  placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                     <select
                       value={formData.project}
                       onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3  focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm"
                     >
                       <option value="" className="bg-gray-900">
                         Select project type
@@ -156,7 +156,7 @@ const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       name="message"
                       rows={6}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm resize-none"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 lg:placeholder-white/40 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 backdrop-blur-sm resize-none"
                       placeholder="Tell me about your project, goals, timeline, and anything else you'd like me to know..."
                     />
                   </div>
