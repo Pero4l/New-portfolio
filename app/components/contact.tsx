@@ -62,27 +62,6 @@ const Contact = () => {
       );
   };
 
-  const testEmail = () => {
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        {
-          to_name: 'Peter',
-          from_name: 'Test User',
-          from_email: 'test@example.com',
-          reply_to: 'test@example.com',
-          message: 'This is a test message',
-          title: 'Test Project',
-          time: new Date().toLocaleString(),
-        }
-       
-      )
-      .then(
-        (response) => console.log('Test success:', response.status, response.text),
-        (error) => console.error('Test error:', error)
-      );
-  };
 
   return (
     <div>
@@ -202,13 +181,7 @@ const Contact = () => {
                     <span>Send Message</span>
                     <Mail className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  <button
-                    type="button"
-                    onClick={testEmail}
-                    className="w-full mt-4 p-2 bg-blue-500 text-white rounded"
-                  >
-                    Test Email
-                  </button>
+                  
                 </form>
               </div>
             </div>
