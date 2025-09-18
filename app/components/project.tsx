@@ -6,6 +6,7 @@ import project2 from '@/public/Screenshot From 2025-09-18 21-25-04.png'
 import project3 from '@/public/Screenshot From 2025-09-18 21-26-45.png'
 import project4 from '@/public/Screenshot From 2025-09-18 21-28-26.png'
 import project5 from '@/public/Screenshot From 2025-09-18 21-29-41.png'
+import project6 from '@/public/Screenshot From 2025-09-18 21-57-20.png'
 import Link from 'next/link';
 
 
@@ -25,12 +26,14 @@ const Project = () => {
       description: "A well functional task management web application with user authentication, real-time updates, and collaborative features.",
       tech: ["React", "Javascript", "Tailwind CSS"],
       image: project2,
+      link: "https://task-management-nine-ecru.vercel.app"
     },
     {
       title: "Clone of Bamboo Website",
       description: "A clone of the Bamboo website, showcasing my skills in frontend development and design replication.",
       tech: ["Next.JS", "Typescript", "Tailwind CSS"],
       image: project3,
+      link: "https://bamboo-clone.vercel.app/"
     },
 
     {
@@ -38,6 +41,7 @@ const Project = () => {
       description: "A movie website that allows users to browse, search, and view details about various movies, built with an API integration.",
       tech: ["Next.JS", "Typescript", "Tailwind CSS"],
       image: project4,
+      link: "https://movie-stream-chi.vercel.app/"
     },
 
     {
@@ -45,6 +49,15 @@ const Project = () => {
       description: "A E-commerce website for hair with product listings, view product, i was building it for fun and for my sister.",
       tech: ["Next.JS", "Typescript", "Tailwind CSS"],
       image: project5,
+      link: "https://t-bella.vercel.app/"
+    },
+
+    {
+       title: "Ticket Booking Website",
+      description: "A ticket booking website that allows users to book tickets for events, with a user-friendly interface.",
+      tech: ["React", "Javascript", "Tailwind CSS"],
+      image: project6,
+      link: "https://new-ticket-generator.vercel.app/"
     }
   ];
 

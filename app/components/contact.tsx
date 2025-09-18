@@ -89,7 +89,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
                   Send Me a Message
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6 py-9">
                   <div className="">
                     <div className="group">
                       <label className="block text-white/70 text-sm font-medium mb-2 group-focus-within:text-purple-300 transition-colors">

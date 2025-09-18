@@ -2,16 +2,17 @@ import React from "react";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { FaFacebookSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import { FaSquareGithub, FaSquareXTwitter } from "react-icons/fa6";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-6 text-center">
       <div className="flex flex-col items-center gap-3">
         {/* Back to Top */}
-        <div className="flex flex-col  items-center gap-2 cursor-pointer hover:text-blue-400">
+        <Link href="#home" className="flex flex-col  items-center gap-2 cursor-pointer hover:text-blue-400">
           <MdKeyboardDoubleArrowUp size={20} />
           <p className="font-semibold">Back To Top</p>
-        </div>
+        </Link>
 
         {/* Social Icons */}
         <div className="flex gap-4 text-3xl">
