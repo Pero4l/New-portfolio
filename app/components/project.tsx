@@ -2,6 +2,10 @@ import React from 'react'
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import project1 from '../../public/Screenshot From 2025-09-18 18-57-45.png'
+import project2 from '@/public/Screenshot From 2025-09-18 21-25-04.png'
+import project3 from '@/public/Screenshot From 2025-09-18 21-26-45.png'
+import project4 from '../../public/Screenshot From 2025-09-18 19-02-06.png'
+import project5 from '../../public/Screenshot From 2025-09-18 19-03-01.png'
 import Link from 'next/link';
 
 
@@ -20,13 +24,13 @@ const Project = () => {
       title: "E-Commerce Empire",
       description: "Full-stack e-commerce solution with payment integration and inventory management.",
       tech: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
-      image: ""
+      image: project2,
     },
     {
       title: "Creative Studio",
       description: "Interactive portfolio website for digital artists with 3D animations and WebGL effects.",
       tech: ["Three.js", "GSAP", "WebGL", "Blender"],
-      image: ""
+      image: project3,
     }
   ];
 
